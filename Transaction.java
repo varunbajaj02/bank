@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 class Transaction {
     String transactionId, senderName, receiverName, status, date;
     double amount;
@@ -18,7 +20,7 @@ class Transaction {
 
 class TransactionHistory {
     Transaction[] transactions = {
-        new Transaction("1001", "Varun", "Amogh", 5000, "Successful", "14-05-2025"),
+        new Transaction("1001", "Varun", "Amogh", 5000, "Successful", LocalDate.now().toString()),
         new Transaction("1002", "John", "Snow", 3000, "Failed", "13-05-2025")
     };
 
@@ -29,5 +31,6 @@ class TransactionHistory {
 
     public static void main(String[] args) {
         new TransactionHistory().displayAllTransactions();
+
     }
 }
